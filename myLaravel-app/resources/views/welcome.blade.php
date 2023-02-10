@@ -1,7 +1,7 @@
 @extends('layout')
 @section('content')
     <div class="container">
-        <div class="bg-fej">
+        <div class="bg-fej" style="background-image: url('{{ asset('img/covid.jpg')}}');">
             <h1>COVID</h1>
             <h3>Külkereskedelmi folyamatok 2020. január–május</h3>
         </div>
