@@ -1,7 +1,7 @@
 @extends('layout')
 @section('content')
     <div class="container">
-        <div class="bg-fej" style="background-image: url(img/covid.jpg);">
+        <div class="bg-fej">
             <h1>COVID</h1>
             <h3>Külkereskedelmi folyamatok 2020. január–május</h3>
         </div>
@@ -61,7 +61,7 @@
                         <option value="3">3.régió</option>
                     </select>
                     <br><br>
-                    <a button type="button" class="btn btn-secondary btn-sm" href="europa.html">adatok</button></a>
+                    <a button type="button" class="btn btn-secondary btn-sm" href="#">adatok</button></a>
                 </form>
                 </p>
             </div>
@@ -74,7 +74,7 @@
                     <option value="3">3.régió</option>
                 </select>
                 <br><br>
-                <a button type="button" class="btn btn-secondary btn-sm" href="vilagkereskedelem.html">küldés</button></a>
+                <a button type="button" class="btn btn-secondary btn-sm" href="#">küldés</button></a>
             </div class="">
             <div class="col-md-4">
                 <h3>Magyarországi adatok</h3>
