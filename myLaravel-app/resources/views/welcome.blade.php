@@ -52,37 +52,51 @@
             <div class="col-4">
                 <h3>Europa</h3>
                 <p>
-                <form>
                     <h6>A kiválasztott európai térségek adatai jelennek meg, havi bontásban.</h6>
-                    <select>
-                        <option selected value="0">Válasszon régiót</option>
-                        <option value="1">1.régió</option>
-                        <option value="2">2.régió</option>
-                        <option value="3">3.régió</option>
+                    <p>Válassza ki, melyik jelentős szereplő adatait szeretné látni</p>
+                <form action="{{route('covid.europa')}}" method="POST">
+                    @csrf
+                    <select class="form-control" name="europa" id="europa">
+                        <option selected disabled value="0">Válasszon régiót</option>
+                        @foreach($eu as $europaa)
+                            <option value="{{$europaa->id}}">{{$europaa->zonanev}}</option>
+                        @endforeach
                     </select>
-                    <br><br>
-                    <a button type="button" class="btn btn-secondary btn-sm" href="#">adatok</button></a>
+                    <button class="btn btn-secondary mt-2" type="submit" id="submit">Szűrés</button>
+                    <br>
+
                 </form>
                 </p>
+
             </div>
             <div class="col-4 bg-torzs">
                 <h3>Világkereskedelem</h3>
-                <select>
-                    <option selected value="0">Válasszon régiót</option>
-                    <option value="1">1.régió</option>
-                    <option value="2">2.régió</option>
-                    <option value="3">3.régió</option>
-                </select>
-                <br><br>
-                <a button type="button" class="btn btn-secondary btn-sm" href="#">küldés</button></a>
-            </div class="">
+                <h6>A kiválasztott világgazdasági szereplő adatai jelennek meg, havi bontásban.</h6>
+                <p>Válassza ki, melyik jelentős szereplő adatait szeretné látni</p>
+                <form action="{{route('covid.vilag')}}" method="POST">
+                    @csrf
+                    <select class="form-control" name="vilag" id="vilag">
+                        <option selected disabled value="0">Válasszon régiót</option>
+                        @foreach($vilag as $item)
+                            <option value="{{$item->id}}">{{$item->zonanev}}</option>
+                        @endforeach
+                    </select>
+                    <button class="btn btn-secondary mt-2" type="submit" id="submit">Szűrés</button>
+                    <br>
+
+                </form>
+                <br>
+
+
+
+            </div>
             <div class="col-md-4">
                 <h3>Magyarországi adatok</h3>
                 <p>
                 <ul class="list-group">
-                    <li class="list-group-item">Export összesen:354 millió</li>
-                    <li class="list-group-item">Import összesen: 334 millió</li>
-                    <li class="list-group-item">Export és Import egyenleg: 19 millió</li>
+                    <li class="list-group-item">Export összesen:354,560.79 EUR</li>
+                    <li class="list-group-item">Import összesen: 334,659.03 EUR</li>
+                    <li class="list-group-item">Export és Import egyenleg: 19,901.76 EUR</li>
                     <li class="list-group-item acive" aria-current="true">Részletes adatok</li>
                 </ul>
                 </p>

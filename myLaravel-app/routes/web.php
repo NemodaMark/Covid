@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',"\\App\\Http\\Controllers\\CovidController@fooldal")->name('covid.fooldal');
+Route::post('/europa',"\\App\\Http\\Controllers\\CovidController@europa")->name('covid.europa');
+Route::post('/vilag',"\\App\\Http\\Controllers\\CovidController@vilag")->name('covid.vilag');
+
